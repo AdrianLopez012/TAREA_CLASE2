@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empleados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #343a40;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            background-color: #343a40;
+            border-radius: 5px;
+        }
+        .edit-icon {
+            text-align: center;
+        }
+        .btn {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+        .btn-primary {
+            background-color: #007bff;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        .btn i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Lista de Empleados</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Apellido y Nombre</th>
+        <th>Correo</th>
+        <th>Departamento</th>
+        <th>Ciudad</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Gietz, William</td>
+        <td>wgietz@company.com</td>
+        <td><span class="badge">Accounting</span></td>
+        <td>Seattle</td>
+        <td class="edit-icon">
+            <button class="btn btn-sm btn-primary" onclick="window.location.href='editar_empleado.html?id=1';">
+                <i class="bx bx-edit-alt"></i> Editar
+            </button>
+            <button class="btn btn-sm btn-danger">
+                <i class="bx bx-trash"></i> Eliminar
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Higgins, Shelley</td>
+        <td>shiggins@company.com</td>
+        <td><span class="badge">Accounting</span></td>
+        <td>Seattle</td>
+        <td class="edit-icon">
+            <button class="btn btn-sm btn-primary" onclick="window.location.href='editar_empleado.html?id=2';">
+                <i class="bx bx-edit-alt"></i> Editar
+            </button>
+            <button class="btn btn-sm btn-danger">
+                <i class="bx bx-trash"></i> Eliminar
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Whalen, Jennifer</td>
+        <td>jwhalen@company.com</td>
+        <td><span class="badge">Administration</span></td>
+        <td>Seattle</td>
+        <td class="edit-icon">
+            <button class="btn btn-sm btn-primary" onclick="window.location.href='editar_empleado.html?id=3';">
+                <i class="bx bx-edit-alt"></i> Editar
+            </button>
+            <button class="btn btn-sm btn-danger">
+                <i class="bx bx-trash"></i> Eliminar
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

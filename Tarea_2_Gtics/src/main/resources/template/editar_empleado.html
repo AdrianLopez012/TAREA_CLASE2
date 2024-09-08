@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Empleado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: #e9ecef;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Información</h2>
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" value="William" readonly>
+    </div>
+    <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" value="Gietz" readonly>
+    </div>
+    <div class="form-group">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" value="wgietz@company.com" readonly>
+    </div>
+    <div class="form-group">
+        <label for="departamento">Departamento</label>
+        <input type="text" id="departamento" value="Accounting" readonly>
+    </div>
+    <div class="form-group">
+        <label for="ciudad">Ciudad</label>
+        <input type="text" id="ciudad" value="Seattle" readonly>
+    </div>
+    <div class="form-group">
+        <label for="trabajo">Trabajo</label>
+        <select id="trabajo">
+            <option>Public Accountant</option>
+        </select>
+    </div>
+    <a href="lista_empleados.html" class="btn">Regresar</a>
+</div>
+
+</body>
+</html>
