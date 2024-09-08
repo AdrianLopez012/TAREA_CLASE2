@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add/Edit Employee</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="mt-4" th:text="${employee.id != null} ? 'Edit Employee' : 'Add New Employee'"></h2>
+            <form th:action="@{/saveEmployee}" th:object="${employee}" method="post" class="mt-4">
+                <div class="form-group">
+                    <label f>First Name</label>
+                    <input type="text" th:field="*{firstName}" class="form-control" placeholder="Enter first name" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" th:field="*{lastName}" class="form-control" placeholder="Enter last name" required>
+                </div>
+                <div class="form-group">
+                    <label >Email</label>
+                    <input type="email" th:field="*{email}" class="form-control" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <label >Department</label>
+                    <select th:field="*{department}" class="form-control" required>
+                        <option th:each="department : ${listDepartments}" th:value="${department.id}" th:text="${department.name}"></option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success">Save</button>
+                <a href="/employees" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+
+        <!-- Optional Bootstrap JS and Popper.js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
